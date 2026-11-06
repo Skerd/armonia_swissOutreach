@@ -1,0 +1,31 @@
+{
+  "swissOutreachCampaign_not_found": {
+    "message": "Fushata nuk u gjet.",
+    "error_code": "swissOutreachCampaign_not_found",
+    "status": 404
+  },
+  "swissOutreachEmail_not_found": {
+    "message": "Email-i nuk u gjet.",
+    "error_code": "swissOutreachEmail_not_found",
+    "status": 404
+  },
+  "swissOutreachProspectCompany_not_found": {
+    "message": "Kompania e synuar nuk u gjet.",
+    "error_code": "swissOutreachProspectCompany_not_found",
+    "status": 404
+  },
+  "campaign_not_found": {
+    "message": "Fushata nuk u gjet.",
+    "error_code": "campaign_not_found",
+    "status": 404
+  },
+  "email_not_found": {
+    "message": "Email-i nuk u gjet.",
+    "error_code": "email_not_found",
+    "status": 404
+  },
+  "email_missing_recipient": {
+    "message": "Email-i nuk ka adresë marrësi.",
+    "error_code": "email_missing_recipient"
+  }
+}

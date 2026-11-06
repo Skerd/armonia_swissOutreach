@@ -1,0 +1,31 @@
+{
+  "swissOutreachCampaign_not_found": {
+    "message": "Die Kampagne wurde nicht gefunden.",
+    "error_code": "swissOutreachCampaign_not_found",
+    "status": 404
+  },
+  "swissOutreachEmail_not_found": {
+    "message": "Die E-Mail wurde nicht gefunden.",
+    "error_code": "swissOutreachEmail_not_found",
+    "status": 404
+  },
+  "swissOutreachProspectCompany_not_found": {
+    "message": "Die Zielfirma wurde nicht gefunden.",
+    "error_code": "swissOutreachProspectCompany_not_found",
+    "status": 404
+  },
+  "campaign_not_found": {
+    "message": "Die Kampagne wurde nicht gefunden.",
+    "error_code": "campaign_not_found",
+    "status": 404
+  },
+  "email_not_found": {
+    "message": "Die E-Mail wurde nicht gefunden.",
+    "error_code": "email_not_found",
+    "status": 404
+  },
+  "email_missing_recipient": {
+    "message": "Die E-Mail hat keine Empfängeradresse.",
+    "error_code": "email_missing_recipient"
+  }
+}
