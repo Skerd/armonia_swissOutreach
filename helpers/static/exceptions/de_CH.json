@@ -27,5 +27,20 @@
   "email_missing_recipient": {
     "message": "Die E-Mail hat keine Empfängeradresse.",
     "error_code": "email_missing_recipient"
+  },
+  "email_already_sent": {
+    "message": "Diese E-Mail wurde bereits versendet oder wird gerade versendet und kann nicht mehr geändert oder übersprungen werden.",
+    "error_code": "email_already_sent",
+    "status": 409
+  },
+  "campaign_cannot_start": {
+    "message": "Diese Kampagne kann jetzt nicht gestartet werden: Sie läuft bereits, versendet gerade, ist abgeschlossen oder abgebrochen.",
+    "error_code": "campaign_cannot_start",
+    "status": 409
+  },
+  "campaign_cannot_send": {
+    "message": "E-Mails können erst versendet werden, wenn die Kampagne auf Freigabe wartet, abgeschlossen oder fehlgeschlagen ist.",
+    "error_code": "campaign_cannot_send",
+    "status": 409
   }
 }

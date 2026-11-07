@@ -27,5 +27,20 @@
   "email_missing_recipient": {
     "message": "Email-i nuk ka adresë marrësi.",
     "error_code": "email_missing_recipient"
+  },
+  "email_already_sent": {
+    "message": "Ky email është dërguar tashmë ose po dërgohet, ndaj nuk mund të ndryshohet apo të anashkalohet më.",
+    "error_code": "email_already_sent",
+    "status": 409
+  },
+  "campaign_cannot_start": {
+    "message": "Kjo fushatë nuk mund të nisë tani: është tashmë në ekzekutim, po dërgon, ka përfunduar ose është anuluar.",
+    "error_code": "campaign_cannot_start",
+    "status": 409
+  },
+  "campaign_cannot_send": {
+    "message": "Email-et mund të dërgohen vetëm kur fushata pret miratim, ka përfunduar ose ka dështuar.",
+    "error_code": "campaign_cannot_send",
+    "status": 409
   }
 }

@@ -27,5 +27,20 @@
   "email_missing_recipient": {
     "message": "The email has no recipient address.",
     "error_code": "email_missing_recipient"
+  },
+  "email_already_sent": {
+    "message": "This email has already been sent or is being sent, so it can no longer be changed or skipped.",
+    "error_code": "email_already_sent",
+    "status": 409
+  },
+  "campaign_cannot_start": {
+    "message": "This campaign cannot be started now: it is already running, sending, completed or cancelled.",
+    "error_code": "campaign_cannot_start",
+    "status": 409
+  },
+  "campaign_cannot_send": {
+    "message": "Emails can be sent only once the campaign is awaiting approval, completed or failed.",
+    "error_code": "campaign_cannot_send",
+    "status": 409
   }
 }

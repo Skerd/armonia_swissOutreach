@@ -27,5 +27,20 @@
   "email_missing_recipient": {
     "message": "L'e-mail non ha un indirizzo destinatario.",
     "error_code": "email_missing_recipient"
+  },
+  "email_already_sent": {
+    "message": "Questa e-mail è già stata inviata o è in fase di invio, quindi non può più essere modificata né saltata.",
+    "error_code": "email_already_sent",
+    "status": 409
+  },
+  "campaign_cannot_start": {
+    "message": "Questa campagna non può essere avviata ora: è già in corso, in fase di invio, completata o annullata.",
+    "error_code": "campaign_cannot_start",
+    "status": 409
+  },
+  "campaign_cannot_send": {
+    "message": "Le e-mail possono essere inviate solo quando la campagna è in attesa di approvazione, completata o non riuscita.",
+    "error_code": "campaign_cannot_send",
+    "status": 409
   }
 }
