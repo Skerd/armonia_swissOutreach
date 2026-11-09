@@ -10,7 +10,7 @@
     "status": 404
   },
   "swissOutreachProspectCompany_not_found": {
-    "message": "Kompania e synuar nuk u gjet.",
+    "message": "Kompania e mundshme nuk u gjet.",
     "error_code": "swissOutreachProspectCompany_not_found",
     "status": 404
   },

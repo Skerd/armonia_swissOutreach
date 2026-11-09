@@ -10,7 +10,7 @@
     "status": 404
   },
   "swissOutreachProspectCompany_not_found": {
-    "message": "Impossibile trovare l'azienda prospect.",
+    "message": "Impossibile trovare l'azienda potenziale.",
     "error_code": "swissOutreachProspectCompany_not_found",
     "status": 404
   },
