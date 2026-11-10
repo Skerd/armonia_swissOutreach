@@ -42,5 +42,25 @@
     "message": "Les e-mails ne peuvent être envoyés que lorsque la campagne attend une approbation, est terminée ou a échoué.",
     "error_code": "campaign_cannot_send",
     "status": 409
+  },
+  "swissOutreachSuppressedContact_not_found": {
+    "message": "L'entrée de la liste d'exclusion est introuvable.",
+    "error_code": "swissOutreachSuppressedContact_not_found",
+    "status": 404
+  },
+  "swissOutreachSuppressedContact_already_exists": {
+    "message": "Cette adresse ou ce domaine figure déjà sur la liste d'exclusion.",
+    "error_code": "swissOutreachSuppressedContact_already_exists",
+    "status": 409
+  },
+  "email_not_editable": {
+    "message": "Seul un brouillon ou un e-mail modifié peut être changé ici. Utilisez « Modifier le brouillon » pour réécrire un e-mail approuvé ou en échec.",
+    "error_code": "email_not_editable",
+    "status": 409
+  },
+  "outreach_mail_disabled": {
+    "message": "L'envoi d'e-mails est désactivé sur ce serveur ; l'e-mail n'a pas été envoyé.",
+    "error_code": "outreach_mail_disabled",
+    "status": 503
   }
 }

@@ -42,5 +42,25 @@
     "message": "Emails can be sent only once the campaign is awaiting approval, completed or failed.",
     "error_code": "campaign_cannot_send",
     "status": 409
+  },
+  "swissOutreachSuppressedContact_not_found": {
+    "message": "The do-not-contact entry was not found.",
+    "error_code": "swissOutreachSuppressedContact_not_found",
+    "status": 404
+  },
+  "swissOutreachSuppressedContact_already_exists": {
+    "message": "This address or domain is already on the do-not-contact list.",
+    "error_code": "swissOutreachSuppressedContact_already_exists",
+    "status": 409
+  },
+  "email_not_editable": {
+    "message": "Only a draft or edited email can be changed here. Use \"Edit draft\" to rewrite an approved or failed email.",
+    "error_code": "email_not_editable",
+    "status": 409
+  },
+  "outreach_mail_disabled": {
+    "message": "Email sending is turned off on this server, so the email was not sent.",
+    "error_code": "outreach_mail_disabled",
+    "status": 503
   }
 }

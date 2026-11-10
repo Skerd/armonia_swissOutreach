@@ -42,5 +42,25 @@
     "message": "Email-et mund të dërgohen vetëm kur fushata pret miratim, ka përfunduar ose ka dështuar.",
     "error_code": "campaign_cannot_send",
     "status": 409
+  },
+  "swissOutreachSuppressedContact_not_found": {
+    "message": "Hyrja në listën e mos-kontaktit nuk u gjet.",
+    "error_code": "swissOutreachSuppressedContact_not_found",
+    "status": 404
+  },
+  "swissOutreachSuppressedContact_already_exists": {
+    "message": "Kjo adresë ose domen është tashmë në listën e mos-kontaktit.",
+    "error_code": "swissOutreachSuppressedContact_already_exists",
+    "status": 409
+  },
+  "email_not_editable": {
+    "message": "Këtu mund të ndryshohet vetëm një draft ose një email i redaktuar. Përdorni «Redakto draftin» për të rishkruar një email të miratuar ose të dështuar.",
+    "error_code": "email_not_editable",
+    "status": 409
+  },
+  "outreach_mail_disabled": {
+    "message": "Dërgimi i emaileve është i fikur në këtë server, prandaj emaili nuk u dërgua.",
+    "error_code": "outreach_mail_disabled",
+    "status": 503
   }
 }

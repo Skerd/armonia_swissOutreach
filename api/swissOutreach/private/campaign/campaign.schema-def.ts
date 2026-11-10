@@ -1,14 +1,12 @@
 import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
-import {
-    campaignStatusValues,
-    emailToneValues,
-    outreachLanguageValues,
-} from "../../../../types/constants";
+import {emailToneValues, outreachLanguageValues, swissCantonCodes, type SwissCantonCode} from "../../../../types/constants";
 
+/** What a user may write. `status`, `stats`, `parsedJob` and `lastError` belong to the pipeline and the actions. */
 export const CampaignSchemaDef = {
     jobDescription: {type: "string", required: true, min: 10, max: 8000},
     country: {type: "string", required: true, min: 2, max: 80},
-    cantons: {type: "stringArray", required: false},
+    /** Canton codes (`swissCantonCodes`), checked by `refineCampaignCantons`; empty means the whole country. */
+    cantons: {type: "stringArray", required: false, maxItems: swissCantonCodes.length},
     maxCompanies: {type: "number", required: true, min: 1, max: 500},
     language: {type: "enum", required: true, options: outreachLanguageValues},
     emailTone: {type: "enum", required: true, options: emailToneValues},
@@ -19,8 +17,8 @@ export const CampaignSchemaDef = {
     senderPhone: {type: "string", required: false, max: 40},
     senderWebsite: {type: "string", required: false, format: "url"},
     additionalNotes: {type: "string", required: false, max: 4000},
-    status: {type: "enum", required: false, options: campaignStatusValues},
 } as const;
 
-export type CreateCampaignFormType = InferCreateForm<typeof CampaignSchemaDef>;
-export type EditCampaignFormType = InferEditForm<typeof CampaignSchemaDef>;
+/** The SchemaDef has no enum array, so the canton codes are narrowed here. */
+export type CreateCampaignFormType = Omit<InferCreateForm<typeof CampaignSchemaDef>, "cantons"> & {cantons?: SwissCantonCode[]};
+export type EditCampaignFormType = Omit<InferEditForm<typeof CampaignSchemaDef>, "cantons"> & {cantons?: SwissCantonCode[]};

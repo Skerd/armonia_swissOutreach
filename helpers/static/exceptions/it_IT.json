@@ -42,5 +42,25 @@
     "message": "Le e-mail possono essere inviate solo quando la campagna è in attesa di approvazione, completata o non riuscita.",
     "error_code": "campaign_cannot_send",
     "status": 409
+  },
+  "swissOutreachSuppressedContact_not_found": {
+    "message": "La voce della lista di esclusione non è stata trovata.",
+    "error_code": "swissOutreachSuppressedContact_not_found",
+    "status": 404
+  },
+  "swissOutreachSuppressedContact_already_exists": {
+    "message": "Questo indirizzo o dominio è già nella lista di esclusione.",
+    "error_code": "swissOutreachSuppressedContact_already_exists",
+    "status": 409
+  },
+  "email_not_editable": {
+    "message": "Qui si può modificare solo una bozza o un'e-mail modificata. Usi «Modifica bozza» per riscrivere un'e-mail approvata o non riuscita.",
+    "error_code": "email_not_editable",
+    "status": 409
+  },
+  "outreach_mail_disabled": {
+    "message": "L'invio di e-mail è disattivato su questo server, quindi l'e-mail non è stata inviata.",
+    "error_code": "outreach_mail_disabled",
+    "status": 503
   }
 }

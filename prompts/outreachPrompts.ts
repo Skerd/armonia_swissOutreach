@@ -1,3 +1,5 @@
+import type {OutreachLanguageValue} from "../types/constants";
+
 export const JOB_PARSE_SYSTEM_PROMPT = `You are a Swiss B2B market research assistant.
 Given a job description, extract structured search metadata for finding registered Swiss companies.
 Return ONLY valid JSON with keys:
@@ -38,10 +40,22 @@ Requirements:
 - include greeting, introduction, project description, request for quotation, contact details, closing
 - write entirely in the requested language
 - identify the sender clearly
+- end the body with the given opt-out sentence, word for word
 Return ONLY valid JSON: {"subject":"...","body":"..."}`;
 
+/**
+ * The sentence every outreach email ends with, in its language: the recipient can reply to stop, and the company then
+ * puts the address on its do-not-contact list.
+ */
+export const OUTREACH_OPT_OUT_LINES: Record<OutreachLanguageValue, string> = {
+    de: "Falls Sie keine weiteren Nachrichten von uns wünschen, antworten Sie bitte kurz mit «Stopp» – wir kontaktieren Sie dann nicht mehr.",
+    fr: "Si vous ne souhaitez plus recevoir de messages de notre part, répondez simplement « stop » – nous ne vous contacterons plus.",
+    it: "Se non desidera ricevere altri messaggi da parte nostra, risponda semplicemente «stop»: non la contatteremo più.",
+    en: "If you would rather not hear from us again, just reply \"stop\" and we will not contact you again.",
+};
+
 export function buildEmailComposeUserPrompt(input: {
-    language: string;
+    language: OutreachLanguageValue;
     emailTone: string;
     jobDescription: string;
     companySummary: string;
@@ -66,5 +80,6 @@ Sender name: ${input.senderName}
 Sender email: ${input.senderEmail}
 Sender phone: ${input.senderPhone || ""}
 Sender website: ${input.senderWebsite || ""}
-Additional notes: ${input.additionalNotes || ""}`;
+Additional notes: ${input.additionalNotes || ""}
+Opt-out sentence: ${OUTREACH_OPT_OUT_LINES[input.language]}`;
 }

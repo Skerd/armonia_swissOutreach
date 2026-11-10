@@ -1,14 +1,15 @@
 import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
-import {outreachEmailStatusValues, outreachLanguageValues} from "../../../../types/constants";
+import {outreachLanguageValues} from "../../../../types/constants";
 
+/**
+ * What a reviewer may edit on a drafted email. Only the pipeline creates emails; their campaign, prospect and
+ * `status` belong to it and to the review actions (approve, skip, editDraft, doNotContact).
+ */
 export const OutreachEmailSchemaDef = {
-    campaignId: {type: "objectId", required: true},
-    prospectCompanyId: {type: "objectId", required: true},
     toEmail: {type: "string", required: false, format: "email"},
     subject: {type: "string", required: true, min: 1, max: 300},
     body: {type: "string", required: true, min: 1, max: 20000},
     language: {type: "enum", required: true, options: outreachLanguageValues},
-    status: {type: "enum", required: false, options: outreachEmailStatusValues},
 } as const;
 
 export type CreateOutreachEmailFormType = InferCreateForm<typeof OutreachEmailSchemaDef>;

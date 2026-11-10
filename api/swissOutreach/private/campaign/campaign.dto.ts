@@ -3,6 +3,7 @@ import type {
     CampaignStatusValue,
     EmailToneValue,
     OutreachLanguageValue,
+    SwissCantonCode,
 } from "../../../../types/constants";
 import type {ParsedJob} from "../../../../types/parsedJob";
 
@@ -19,7 +20,7 @@ export type Campaign = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     jobDescription: string;
     country: string;
-    cantons: string[];
+    cantons: SwissCantonCode[];
     maxCompanies: number;
     language: OutreachLanguageValue;
     emailTone: EmailToneValue;

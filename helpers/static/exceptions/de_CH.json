@@ -42,5 +42,25 @@
     "message": "E-Mails können erst versendet werden, wenn die Kampagne auf Freigabe wartet, abgeschlossen oder fehlgeschlagen ist.",
     "error_code": "campaign_cannot_send",
     "status": 409
+  },
+  "swissOutreachSuppressedContact_not_found": {
+    "message": "Der Eintrag auf der Sperrliste wurde nicht gefunden.",
+    "error_code": "swissOutreachSuppressedContact_not_found",
+    "status": 404
+  },
+  "swissOutreachSuppressedContact_already_exists": {
+    "message": "Diese Adresse oder Domain steht bereits auf der Sperrliste.",
+    "error_code": "swissOutreachSuppressedContact_already_exists",
+    "status": 409
+  },
+  "email_not_editable": {
+    "message": "Hier kann nur ein Entwurf oder eine bearbeitete E-Mail geändert werden. Eine genehmigte oder fehlgeschlagene E-Mail überarbeiten Sie mit «Entwurf bearbeiten».",
+    "error_code": "email_not_editable",
+    "status": 409
+  },
+  "outreach_mail_disabled": {
+    "message": "Der E-Mail-Versand ist auf diesem Server ausgeschaltet; die E-Mail wurde nicht gesendet.",
+    "error_code": "outreach_mail_disabled",
+    "status": 503
   }
 }
