@@ -1,5 +1,5 @@
 import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
-import type {OutreachEmailStatusValue, OutreachLanguageValue} from "../../../../types/constants";
+import type {OutreachEmailErrorCode, OutreachEmailStatusValue, OutreachLanguageValue} from "../../../../types/constants";
 
 export type OutreachEmail = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
@@ -13,5 +13,6 @@ export type OutreachEmail = DeletedData & OwnershipData & LifeCycleData & {
     messageId?: string;
     sentAt?: string;
     attempts: number;
-    lastError?: string;
+    /** A known reason code, or a provider's error text as it came. */
+    lastError?: OutreachEmailErrorCode | (string & {});
 };

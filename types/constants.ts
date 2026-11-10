@@ -38,6 +38,13 @@ export const outreachEmailStatusValues = [
 
 export type OutreachEmailStatusValue = (typeof outreachEmailStatusValues)[number];
 
+/**
+ * Known reasons an email was skipped or failed, stored as these codes in its `lastError` and translated by the panel
+ * (D126). Any other `lastError` is a provider's own error text and is shown as stored.
+ */
+export const outreachEmailErrorCodes = ["do_not_contact", "mail_disabled"] as const;
+export type OutreachEmailErrorCode = (typeof outreachEmailErrorCodes)[number];
+
 export const outreachLanguageValues = ["de", "fr", "it", "en"] as const;
 export type OutreachLanguageValue = (typeof outreachLanguageValues)[number];
 
