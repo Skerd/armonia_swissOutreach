@@ -62,5 +62,10 @@
     "message": "Dërgimi i emaileve është i fikur në këtë server, prandaj emaili nuk u dërgua.",
     "error_code": "outreach_mail_disabled",
     "status": 503
+  },
+  "campaign_cannot_cancel": {
+    "message": "Kjo fushatë ka përfunduar ose është anuluar tashmë, prandaj nuk mund të anulohet.",
+    "error_code": "campaign_cannot_cancel",
+    "status": 409
   }
 }

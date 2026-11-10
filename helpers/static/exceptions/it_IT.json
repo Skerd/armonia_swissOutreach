@@ -62,5 +62,10 @@
     "message": "L'invio di e-mail è disattivato su questo server, quindi l'e-mail non è stata inviata.",
     "error_code": "outreach_mail_disabled",
     "status": 503
+  },
+  "campaign_cannot_cancel": {
+    "message": "Questa campagna è già completata o annullata, quindi non può essere annullata.",
+    "error_code": "campaign_cannot_cancel",
+    "status": 409
   }
 }

@@ -62,5 +62,10 @@
     "message": "L'envoi d'e-mails est désactivé sur ce serveur ; l'e-mail n'a pas été envoyé.",
     "error_code": "outreach_mail_disabled",
     "status": 503
+  },
+  "campaign_cannot_cancel": {
+    "message": "Cette campagne est déjà terminée ou annulée, elle ne peut donc pas être annulée.",
+    "error_code": "campaign_cannot_cancel",
+    "status": 409
   }
 }

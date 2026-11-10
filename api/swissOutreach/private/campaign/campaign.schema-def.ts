@@ -1,8 +1,12 @@
 import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
 import {emailToneValues, outreachLanguageValues, swissCantonCodes, type SwissCantonCode} from "../../../../types/constants";
 
+export const CAMPAIGN_NAME_MAX = 120;
+
 /** What a user may write. `status`, `stats`, `parsedJob` and `lastError` belong to the pipeline and the actions. */
 export const CampaignSchemaDef = {
+    /** How the campaign is called in pickers, headings and lists. */
+    name: {type: "string", required: true, min: 1, max: CAMPAIGN_NAME_MAX},
     jobDescription: {type: "string", required: true, min: 10, max: 8000},
     country: {type: "string", required: true, min: 2, max: 80},
     /** Canton codes (`swissCantonCodes`), checked by `refineCampaignCantons`; empty means the whole country. */

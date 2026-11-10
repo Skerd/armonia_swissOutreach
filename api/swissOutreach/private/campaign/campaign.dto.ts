@@ -18,6 +18,8 @@ export type CampaignStats = {
 
 export type Campaign = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
+    /** Rows created before campaigns had a name carry their sender company name here. */
+    name: string;
     jobDescription: string;
     country: string;
     cantons: SwissCantonCode[];

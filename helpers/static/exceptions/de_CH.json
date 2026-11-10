@@ -62,5 +62,10 @@
     "message": "Der E-Mail-Versand ist auf diesem Server ausgeschaltet; die E-Mail wurde nicht gesendet.",
     "error_code": "outreach_mail_disabled",
     "status": 503
+  },
+  "campaign_cannot_cancel": {
+    "message": "Diese Kampagne ist bereits abgeschlossen oder abgebrochen und kann daher nicht abgebrochen werden.",
+    "error_code": "campaign_cannot_cancel",
+    "status": 409
   }
 }

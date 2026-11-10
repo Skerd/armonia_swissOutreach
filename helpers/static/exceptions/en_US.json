@@ -62,5 +62,10 @@
     "message": "Email sending is turned off on this server, so the email was not sent.",
     "error_code": "outreach_mail_disabled",
     "status": 503
+  },
+  "campaign_cannot_cancel": {
+    "message": "This campaign is already completed or cancelled, so it cannot be cancelled.",
+    "error_code": "campaign_cannot_cancel",
+    "status": 409
   }
 }
